@@ -443,8 +443,8 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
 
   @override
   void initState() {
-   if (selectedItems == null) selectedItems = [];
-   if (widget.value != null) {
+    if (selectedItems == null) selectedItems = [];
+    if (widget.value != null) {
       int i = indexFromValue(widget.value);
       if (i != null && i != -1) {
         selectedItems = [i];
@@ -460,7 +460,7 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
     }
     if (widget.multipleSelection) {
       selectedItems = List<int>.from(widget.selectedItems ?? []);
-    }     
+    }
   }
 
   @override
@@ -632,7 +632,7 @@ class _SearchableDropdownState<T> extends State<SearchableDropdown<T>> {
         Stack(
           children: <Widget>[
             Padding(
-              padding: EdgeInsets.all(10.0),
+              padding: EdgeInsets.all(0.0),
               child: result,
             ),
             widget.underline is NotGiven
